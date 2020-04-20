@@ -3,7 +3,7 @@ var router=express.Router();
 const mongoose=require("mongoose");
 const Task=require("../model/model");
 
-
+//get request
 router.get('/',(req,res)=>{
     console.log("enter in the get api")
     Task.find((err,docs)=>{
@@ -13,7 +13,7 @@ router.get('/',(req,res)=>{
         else{console.log("error in retriving data")}
     });
 });
-
+//post request
 router.post("/post",(req,res)=>{
     console.log("enter in create post")
    
